@@ -27,5 +27,3 @@ GROUP BY
 	DATE_TRUNC('hour',host_usage.timestamp) + DATE_PART('minute',host_usage.timestamp)::INT/5 * interval '5 minutes'
 ORDER BY
 	host_usage.host_id;
-
-	
