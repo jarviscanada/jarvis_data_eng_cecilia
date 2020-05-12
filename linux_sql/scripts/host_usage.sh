@@ -21,7 +21,6 @@ disk_available=$(df -BM / | awk '{print $4}' | sed 's/[A-Za-z]*//g' | xargs)
 
 timestamp=$(date '+%Y-%m-%d %H:%M:%S') 
 
-
 #insert value in table host_usage
 
 export PGPASSWORD=$psql_password
