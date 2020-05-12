@@ -6,7 +6,6 @@ enter_cmd=$1
 db_username=$2
 db_password=$3
 
-
 #if user enter create option
 if [ "$1" == "create" ] && [ "$#" = "3" ];
 then
