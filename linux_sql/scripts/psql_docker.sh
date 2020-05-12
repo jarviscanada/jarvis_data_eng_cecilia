@@ -55,7 +55,6 @@ then
 	fi
 fi
 
-
 #if user enter stop option 
 if [ "$1" == "stop" ];
 then 
