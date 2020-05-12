@@ -10,7 +10,7 @@ The collected data will be stored in an RDBMS database. LCA team will use the da
 
 ![](https://github.com/jarviscanada/jarvis_data_eng_cecilia/blob/feature/sql/linux_sql/assets/design.png)
 
-## Database & Table 
+## Database & Scripts
 - `psql_docker.sh` - This script contains 3 basic functionality which are `create` new instance, `start` and `stop`containers to manage the PostgreSQL instance. 
 - `ddl.sql` - This script create `host_agent` database and two tables `host_info` and `host_usage`
     -  `host_info.sh` collects the host hardware info and insert it into the database. It will be run only once at the installation time.
