@@ -53,7 +53,7 @@ eg:`bash scripts/host_usage.sh localhost 5432 host_agent postgres password`
 
 - `queries.sql`:get specific data from two tables
 
-- In order to collect the usage information every minute, use `crontab -e` and enter the following code: `* * * * * bash [path to host_usage.sh]/host_usage.sh "host name" "port number" "database name" "user name "password" >> [path to store log file]/host_usage.log`. (eg:`* * * * * bash /home/centos/dev/jrvs/bootcamp/linux_sql/host_agent/scripts/host_usage.sh localhost 5432 host_agent postgres password > /tmp/host_usage.log`) 
+- In order to collect the usage information every minute, use `crontab -e` and enter the following code: `* * * * * bash [path to host_usage.sh]/host_usage.sh "host name" "port number" "database name" "user name "password" &> [path to store log file]/host_usage.log`. (eg:`* * * * * bash /home/centos/dev/jrvs/bootcamp/linux_sql/host_agent/scripts/host_usage.sh localhost 5432 host_agent postgres password &> /tmp/host_usage.log`) 
 
 ## Improvement
 1. Create a script that containes all the commands in every step and can set up all the processes at once 
