@@ -6,7 +6,6 @@ enter_cmd=$1
 db_username=$2
 db_password=$3
 
-
 #if user enter create option
 if [ "$1" == "create" ] && [ "$#" = "3" ];
 then
@@ -25,15 +24,9 @@ then
    	then 
 		docker run --name jrvs-psql -e POSTGRES_USER=${db_username} -e POSTGRES_PASSWORD=${db_password} -d -v pgdata:/var/lib/postgresql/data -p 5432:5432 postgres
 		echo "container created"
-		exit 0
+		exit $?
 	fi
-
-
-
-	
-
 fi
-
 
 #if user didn't enter username or password
 if [ "$1" == "create" ] && [ "$#"!=3 ];
@@ -41,7 +34,6 @@ then
 	echo "Invalid argument, please enter username and password"
         exit 1
 fi
-
 
 #if user enter start option 
 if [ "$1" == "start" ]; 
@@ -62,7 +54,6 @@ then
 	fi
 fi
 
-
 #if user enter stop option 
 if [ "$1" == "stop" ];
 then 
@@ -72,9 +63,6 @@ then
 	exit 0
 fi
 
-
-
-
 #if user enter wrong argument 
 if [ "$1" != "create" ] && [ "$1" != "start" ] && [ "$1" != "stop" ];
 then 
@@ -82,7 +70,7 @@ then
     	exit 1
 fi
 
-
+exit 0
 
 
 
