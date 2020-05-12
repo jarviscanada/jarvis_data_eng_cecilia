@@ -14,24 +14,25 @@ The collected data will be stored in an RDBMS database. LCA team will use the da
 - `psql_docker.sh` - This script contains 3 basic functionality which are `create` new instance, `start` and `stop`containers to manage the PostgreSQL instance. 
 - `ddl.sql` - This script create `host_agent` database and two tables `host_info` and `host_usage`
     -  `host_info.sh` collects the host hardware info and insert it into the database. It will be run only once at the installation time.
-        * `id` - Unique ID number for each server, auto-increament
-        * `hostname` - Name of host system
-        * `cpu_number` - Host system core count of CPU
-        * `cpu_architecture` - Host CPU architecture 
-        * `cpu_model` - Host CPU model name 
-        * `cpu_mhz` - Host CPU speed (in Mhz)
-        * `L2_cache` - Host machine L2 cache size (in KB)
-        * `total_mem` - Host machine total usable memory (in KB)
-        * `timestamp` - Capture current time 
+          * `id` - Unique ID number for each server, auto-increament
+          * `hostname` - Name of host system
+          * `cpu_number` - Host system core count of CPU
+          * `cpu_architecture` - Host CPU architecture 
+          * `cpu_model` - Host CPU model name 
+          * `cpu_mhz` - Host CPU speed (in Mhz)
+          * `L2_cache` - Host machine L2 cache size (in KB)
+          * `total_mem` - Host machine total usable memory (in KB)
+          * `timestamp` - Capture current time 
     - `host_usage.sh` collects the current host usage (CPU and Memory) and then insert into the database. It will be triggered by the `crontab` job every minute.
-        * `timestamp` - Capture current time 
-        * `host_id` - Unique primary key relating to host machine in host_info
-        * `memory_free` - Total free memory when capture 
-        * `cpu_idle` - Percentage of time spend when CPU load idling
-        * `cpu_kernel` - Percentage of time spend when CPU load operating on kernel
-        * `disk_io` - Number of current I/O operations in disk
-        * `disk_available` - Amount of available disk space (in MB)
--`queries.sql` - Contain two Queries to help business select data information
+         * `timestamp` - Capture current time 
+         * `host_id` - Unique primary key relating to host machine in host_info
+         * `memory_free` - Total free memory when capture 
+         * `cpu_idle` - Percentage of time spend when CPU load idling
+         * `cpu_kernel` - Percentage of time spend when CPU load operating on kernel
+         * `disk_io` - Number of current I/O operations in disk
+         * `disk_available` - Amount of available disk space (in MB)
+        
+- `queries.sql` - Contain two Queries to help business select data information
     * Group hosts by CPU number and sort by their memory size in descending order
     * Average used memory in percentage over 5 mins interval for each host
         
