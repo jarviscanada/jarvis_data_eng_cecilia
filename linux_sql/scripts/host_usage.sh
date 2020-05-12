@@ -7,6 +7,7 @@ db_name=$3
 psql_user=$4
 psql_password=$5
 
+#parse host hardware specifications
 hostname=$(hostname -f)
 
 memory_free=$(vmstat -t | awk 'NR==3 {print $4}' | xargs) 
