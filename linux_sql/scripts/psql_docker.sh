@@ -13,7 +13,7 @@ then
 	if [ "$(docker ps -f name= "jrvs-psql" | wc -l)" = "2" ];
 	then
 		echo "container is already created"
-       	 	exit 1
+                exit 1
 	fi
 
         docker volume create pgdata 
