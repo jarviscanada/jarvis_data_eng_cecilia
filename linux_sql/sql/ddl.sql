@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS PUBLIC.host_info
 	);
 
 CREATE TABLE IF NOT EXISTS PUBLIC.host_usage
-  (
+   (
 		"timestamp"             TIMESTAMP NOT NULL, 
 		host_id                 SERIAL REFERENCES public.host_info(id),
 		memory_free             INT NOT NULL,
@@ -24,4 +24,4 @@ CREATE TABLE IF NOT EXISTS PUBLIC.host_usage
         	cpu_kernel       	INT NOT NULL,
 		disk_io               	INT NOT NULL,
 		disk_available          INT NOT NULL
-	 );
+	);
