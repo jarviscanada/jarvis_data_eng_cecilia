@@ -14,7 +14,6 @@ then
 	then
 		echo "container is already created"
        	 	exit 1
-		
 	fi
 
         docker volume create pgdata 
