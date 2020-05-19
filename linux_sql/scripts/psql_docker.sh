@@ -7,7 +7,7 @@ db_username=$2
 db_password=$3
 
 #if user enter create option
-if [ "$1" == "create" ] && [ "$#" = "3" ];
+if [ "enter_cmd" == "create" ] && [ "$#" = "3" ];
 then
 	#check whether container already created
 	if [ "$(docker ps -f name= "jrvs-psql" | wc -l)" = "2" ];
@@ -29,14 +29,14 @@ then
 fi
 
 #if user didn't enter username or password
-if [ "$1" == "create" ] && [ "$#"!=3 ];
+if [ "enter_cmd" == "create" ] && [ "$#"!=3 ];
 then 
 	echo "Invalid argument, please enter username and password"
         exit 1
 fi
 
 #if user enter start option 
-if [ "$1" == "start" ]; 
+if [ "enter_cmd" == "start" ]; 
 then 
     #start docker 
     	systemctl status docker && systemctl start docker
@@ -55,7 +55,7 @@ then
 fi
 
 #if user enter stop option 
-if [ "$1" == "stop" ];
+if [ "enter_cmd" == "stop" ];
 then 
     	#stop docker 
     	systemctl status docker && docker stop jrvs-psql
@@ -64,7 +64,7 @@ then
 fi
 
 #if user enter wrong argument 
-if [ "$1" != "create" ] && [ "$1" != "start" ] && [ "$1" != "stop" ];
+if [ "enter_cmd" != "create" ] && [ "enter_cmd" != "start" ] && [ "enter_cmd" != "stop" ];
 then 
 	echo "Invalid argument, argument shoule be create|start|stop"
     	exit 1
