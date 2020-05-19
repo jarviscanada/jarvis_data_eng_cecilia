@@ -8,7 +8,7 @@ The collected data will be stored in an RDBMS database. LCA team will use the da
 
 ## Architecture & Design
 
-![](https://github.com/jarviscanada/jarvis_data_eng_cecilia/edit/release/linux_sql/README.md)
+![](https://github.com/jarviscanada/jarvis_data_eng_cecilia/blob/release/linux_sql/assets/design.png)
 
 ## Database & Scripts
 - `psql_docker.sh` - This script contains 3 basic functionality which are `create` new instance, `start` and `stop`containers to manage the PostgreSQL instance. 
