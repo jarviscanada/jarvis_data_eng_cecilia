@@ -38,22 +38,32 @@ The collected data will be stored in an RDBMS database. LCA team will use the da
         
     
 ## Usage
-- `psql_docker.sh` usage: There are 3 input option for this, create,start and stop.
-    * Create : `./psql_docker.sh create [username][password]`
-    * Start: `./psql_docker.sh start `
-    * Stop: `./psql_docker.sh stop`
+### `psql_docker.sh` usage
+    There are 3 input option for this script. For each option, command instruction show below :
+        Create : ./psql_docker.sh create [username][password]
+        Start: ./psql_docker.sh start
+        Stop: ./psql_docker.sh stop
 
-- `ddl.sql` usage: create datebase host_agent and two tables host_info and host_usage
+### `ddl.sql` usage
+    create datebase host_agent and two tables host_info and host_usage
 
-- `host_info.sh` usage: `./scripts/host_info.sh psql_host psql_port db_name psql_user psql_password
-eg: ./scripts/host_info.sh "localhost" 5432 "host_agent" "postgres" "mypassword"`
+### `host_info.sh` usage
+    ./scripts/host_info.sh psql_host psql_port db_name psql_user psql_password
+    eg: ./scripts/host_info.sh "localhost" 5432 "host_agent" "postgres" "mypassword"
 
--  `host_usage.sh` usage: `bash scripts/host_usage.sh psql_host psql_port db_name psql_user psql_password`
-eg:`bash scripts/host_usage.sh localhost 5432 host_agent postgres password`
+### `host_usage.sh` usage
+    bash scripts/host_usage.sh psql_host psql_port db_name psql_user psql_password`
+    eg:`bash scripts/host_usage.sh localhost 5432 host_agent postgres password
 
-- `queries.sql`:get specific data from two tables
+### `queries.sql` usage 
+    get specific data from two tables
 
-- In order to collect the usage information every minute, use `crontab -e` and enter the following code: `* * * * * bash [path to host_usage.sh]/host_usage.sh "host name" "port number" "database name" "user name "password" &> [path to store log file]/host_usage.log`. (eg:`* * * * * bash /home/centos/dev/jrvs/bootcamp/linux_sql/host_agent/scripts/host_usage.sh localhost 5432 host_agent postgres password &> /tmp/host_usage.log`) 
+### `crontab` usage
+    In order to collect the usage information every minute, use `crontab -e` 
+    and enter the following code: `* * * * * bash [path to host_usage.sh]/host_usage.sh 
+    "host name" "port number" "database name" "user name "password" &> [path to store log file]/host_usage.log`
+    (eg:`* * * * * bash /home/centos/dev/jrvs/bootcamp/linux_sql/host_agent/scripts/host_usage.sh 
+    localhost 5432 host_agent postgres password &> /tmp/host_usage.log`) 
 
 ## Improvement
 1. Create a script that containes all the commands in every step and can set up all the processes at once 
