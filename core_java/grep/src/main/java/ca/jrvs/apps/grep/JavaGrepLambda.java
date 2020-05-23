@@ -48,5 +48,4 @@ public class JavaGrepLambda extends JavaGrepImp{
     }
     return lineLambda;
   }
-
 }
