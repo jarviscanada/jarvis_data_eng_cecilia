@@ -17,6 +17,11 @@ This app take three arguments:
      .*IllegalArgumentException.* ./grep/src /tmp/javaGrep.out
 
 ## Pseudocode & Structure 
+
+The relations between three java files show below : 
+
+![](https://github.com/jarviscanada/jarvis_data_eng_cecilia/blob/develop/core_java/grep/asset/Diagram.png)
+
 The basic pseudocode show below :
 ```
 matchedLines = []
