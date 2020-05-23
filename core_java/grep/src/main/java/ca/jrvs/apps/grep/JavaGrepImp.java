@@ -44,7 +44,6 @@ public class JavaGrepImp implements JavaGrep {
 
   @Override
   public void process() throws IOException {
-
     List<String> matchedLines = new ArrayList<>();
     for (File file: listFiles(this.rootPath) )
       for (String line : readLines(file)) {
