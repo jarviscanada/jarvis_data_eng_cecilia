@@ -23,7 +23,6 @@ public class JavaGrepImp implements JavaGrep {
   private String rootPath;
   private String outFile;
 
-
   public static void main(String[] args){
     //configure logger
     BasicConfigurator.configure();
@@ -139,5 +138,4 @@ public class JavaGrepImp implements JavaGrep {
   public void setOutFile(String outFile) {
     this.outFile = outFile;
   }
-
 }
