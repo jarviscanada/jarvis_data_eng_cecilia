@@ -41,12 +41,10 @@ public class Order implements DataTransferObject{
   }
 
   public void setId(long id) {
-
     this.id = id;
   }
 
   public String getCustomerFirstName() {
-
     return customerFirstName;
   }
 
@@ -63,47 +61,38 @@ public class Order implements DataTransferObject{
   }
 
   public String getCustomerEmail() {
-
     return customerEmail;
   }
 
   public void setCustomerEmail(String customerEmail) {
-
     this.customerEmail = customerEmail;
   }
 
   public Date getCreationDate() {
-
     return creationDate;
   }
 
   public void setCreationDate(Date creationDate) {
-
     this.creationDate = creationDate;
   }
 
   public BigDecimal getTotalDue() {
-
     return totalDue;
   }
 
   public void setTotalDue(BigDecimal totalDue) {
-
     this.totalDue = totalDue;
   }
 
   public String getStatus() {
-
     return status;
   }
 
   public void setStatus(String status) {
-
     this.status = status;
   }
 
   public String getSalespersonFirstName() {
-
     return salespersonFirstName;
   }
 
@@ -112,7 +101,6 @@ public class Order implements DataTransferObject{
   }
 
   public String getSalespersonLastName() {
-
     return salespersonLastName;
   }
 
@@ -121,7 +109,6 @@ public class Order implements DataTransferObject{
   }
 
   public String getSalespersonEmail() {
-
     return salespersonEmail;
   }
 
@@ -130,13 +117,10 @@ public class Order implements DataTransferObject{
   }
 
   public List<OrderLines> getOrderLines() {
-
     return orderLines;
   }
 
   public void setOrderLines(List<OrderLines> orderLines) {
     this.orderLines = orderLines;
-  }
-
-  
+  }  
 }
