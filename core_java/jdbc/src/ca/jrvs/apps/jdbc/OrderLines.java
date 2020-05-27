@@ -70,4 +70,3 @@ public class OrderLines {
     this.productPrice = productPrice;
   }
 }
-
