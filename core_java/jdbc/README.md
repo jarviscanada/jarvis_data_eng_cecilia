@@ -1,7 +1,7 @@
 # JDBC APP
 
 ## Introduction 
-The purpose of this application is to allow user use JDBC to connect with PotsgresSQl databae and implement CRUD (create, read, update,delete) operations by using Data Access Object(DAO) pattern. This project is to follow [Learning JDBC course](https://www.linkedin.com/learning/learning-jdbc/get-going-with-data-access-in-java) by Frank Moley. The project make me learn about the concepts of Data Access Objects (DAO) pattern, Data Transfer Objects(DTO) pattern, Repository patterns, CRUD operations, transactions and commits & rollbacks as well as exception handling in JDBC.
+The purpose of this application is to allow user use JDBC to connect with PotsgresSQl databae and implement CRUD (create, read, update,delete) operations by using Data Access Object(DAO) pattern. This project is to follow [Learning JDBC course](https://www.linkedin.com/learning/learning-jdbc/get-going-with-data-access-in-java) by Frank Moley. The project make me get familar of JDBC and learn about the concepts of Data Access Objects (DAO) pattern, Data Transfer Objects(DTO) pattern, Repository patterns, CRUD operations, transactions, commits, rollbacks as well as exception handling in JDBC.
 
 ## ER Diagram
 
